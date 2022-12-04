@@ -33,4 +33,18 @@ Describe: Player.prototype.diceRoll();
 Test: "It should return a random number between 1 and 6."
 Code: Player.diceRoll();
 Expected Output: a number between 1 and 6
+
+Test: "It should add each dice roll to the players currentScore"
+Code: Player.diceRoll();
+Expected Output: {
+  this.username = littleGuy;
+  this.currentScore = updated Score;
+}
+
+Test: "It should make currentScore = 0 if a 1 is rolled."
+Code: Player.diceRoll();
+Expected Output: {
+  this.username = littleGuy;
+  this.currentScore = 0;
+}
 ```

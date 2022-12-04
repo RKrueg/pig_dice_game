@@ -16,5 +16,12 @@ function Player(username, currentScore, totalScore) {
 
 Player.prototype.diceRoll = function () {
   let roll = Math.floor(Math.random() * (6) + 1);
-  return roll;
+  //return roll;
+  if (roll === 1) {
+    this.currentScore = 0;
+  } else {
+  this.currentScore += roll;
+  }
+  //this.totalScore += currentScore;
 }
+
