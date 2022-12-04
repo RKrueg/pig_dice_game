@@ -17,15 +17,20 @@ Expected Output: {
   this.totalScore = 36;
 }
 
-Describe:
+Describe: PigGame.prototype.addPlayer();
 
-Test:
-Code:
-Expected Output:
+Test: "It should add a Player object to to the PigGame object."
+Code: PigGame.addPlayer(player);
+Expected Output: {
+  this.players = {
+    this.username = littleGuy;
+    ...
+  }
+}
 
-Describe:
+Describe: Player.prototype.diceRoll();
 
-Test:
-Code:
-Expected Output:
+Test: "It should return a random number between 1 and 6."
+Code: Player.diceRoll();
+Expected Output: a number between 1 and 6
 ```
