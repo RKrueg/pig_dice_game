@@ -1,10 +1,17 @@
 //PigGame Logic
 function PigGame() {
   this.players = {};
+  this.currentId = 0;
 }
 
 PigGame.prototype.addPlayer = function(player) {
+  player.id = this.assignId();
   this.players[player.username] = player;
+}
+
+PigGame.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 // Player Logic
@@ -19,9 +26,14 @@ Player.prototype.diceRoll = function () {
   //return roll;
   if (roll === 1) {
     this.currentScore = 0;
+    //switchTurn();
   } else {
   this.currentScore += roll;
   }
   //this.totalScore += currentScore;
+}
+
+function switchTurns() {
+  
 }
 

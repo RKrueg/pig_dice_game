@@ -7,6 +7,17 @@ Expected Output: {
   this.players = {};
 }
 
+Describe: PigGame.prototype.assignId();
+
+Test: "It should assign an Id to each player"
+Code: PigGame.assignId();
+Expected Output: {
+  this.username = littleGuy;
+  this currentScore = 0;
+  this.totalScore = 0;
+  this.currentId = 1;
+}
+
 Describe: Player();
 
 Test: "It should create a player object with username, currentScore, totalScore."
