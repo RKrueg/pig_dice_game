@@ -7,16 +7,6 @@ Expected Output: {
   this.players = {};
 }
 
-Describe: PigGame.prototype.assignId();
-
-Test: "It should assign an Id to each player"
-Code: PigGame.assignId();
-Expected Output: {
-  this.username = littleGuy;
-  this currentScore = 0;
-  this.totalScore = 0;
-  this.currentId = 1;
-}
 
 Describe: Player();
 
@@ -39,7 +29,7 @@ Expected Output: {
   }
 }
 
-Describe: Player.prototype.diceRoll();
+Describe: PigGame.prototype.diceRoll();
 
 Test: "It should return a random number between 1 and 6."
 Code: Player.diceRoll();
@@ -56,6 +46,15 @@ Test: "It should make currentScore = 0 if a 1 is rolled."
 Code: Player.diceRoll();
 Expected Output: {
   this.username = littleGuy;
+  this.currentScore = 0;
+}
+
+Describe: Player.prototype.hold();
+
+Test: "It should add currentScore to totalScore and reset currentScore to 0."
+Code: Player.hold()
+Expected Output: {
+  this.totalScore = totalScore + currentScore;
   this.currentScore = 0;
 }
 ```
