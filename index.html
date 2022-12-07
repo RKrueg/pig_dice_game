@@ -2,17 +2,18 @@
 <html lang="en-US">
 <head>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/script.js"></script>
+  <script src="js/scripts.js"></script>
   <title>Pig Dice Game</title>
 </head>
 <body>
   <h1>Pig Dice Game</h1>
   <div class="player1container">
-    <form id="playerName">
+    <form id="player1Name">
       <label for="player1">Player 1 Name</label>
       <input type="text" class="player1">
       <button type="submit" class="player1btn">Enter</button>
     </form> 
+    <p>Player1: <span class="player1-userName"></span></p>
     <p>Current Score: <span class="player1-currentScore"></span></p>
     <p>Total Score: <span class="player1-totalScore"></span></p>
   </div>
@@ -22,12 +23,14 @@
       <input type="text" class="player2">
       <button type="submit" class="player2btn">Enter</button>
     </form> 
+    <p>Player2: <span class="player2-userName"></span></p>
     <p>Current Score: <span class="player2-currentScore"></span></p>
     <p>Total Score: <span class="player2-totalScore"></span></p>
   </div>
   <img src="" alt="">
   <button type="btn" class="rollbtn">Roll Dice!</button>
   <button type="btn" class="holdbtn">Hold</button>
+  <button type="btn" class="newGame">New Game</button>
   <div id="winner-div" class="hidden">
     <p class="winner-p"></p>
   </div>
