@@ -4,12 +4,13 @@ function PigGame() {
   this.currentScore = 0;
 }
 
-PigGame.prototype.addPlayer = function(player) {
+PigGame.prototype.addPlayer = function (player) {
   this.players.push(player);
 }
 
-PigGame.prototype.diceRoll = function() {
+PigGame.prototype.diceRoll = function () {
   let roll = Math.floor(Math.random() * (6) + 1);
+  displayImage(roll);
   if (roll !== 1) {
     this.currentScore += roll;
   } else {
@@ -22,20 +23,20 @@ PigGame.prototype.switchTurns = function () {
   if (this.currentTurn === 0) {
     this.currentTurn = 1;
   } else {
-   this.currentTurn = 0;
+    this.currentTurn = 0;
   }
 }
 
 PigGame.prototype.hold = function () {
   if (this.currentTurn === 0) {
-  pigGame.players[0].totalScore += pigGame.currentScore;
-} else {
-  pigGame.players[1].totalScore += pigGame.currentScore;
-}
+    pigGame.players[0].totalScore += pigGame.currentScore;
+  } else {
+    pigGame.players[1].totalScore += pigGame.currentScore;
+  }
   pigGame.currentScore = 0;
 }
 
-function Player (userName) {
+function Player(userName) {
   this.userName = userName;
   this.totalScore = 0;
 }
@@ -63,11 +64,33 @@ function player2Submit(event) {
 function diceRoll(event) {
   pigGame.diceRoll();
   if (pigGame.currentTurn === 0) {
-  document.querySelector(".player1-currentScore").innerText = pigGame.currentScore;
+    document.querySelector(".player1-currentScore").innerText = pigGame.currentScore;
   } else if (pigGame.currentTurn === 1) {
     document.querySelector(".player2-currentScore").innerText = pigGame.currentScore;
   }
   winningScore();
+}
+
+function displayImage(roll) {
+  document.querySelector("img#img1").classList.add("hidden");
+  document.querySelector("img#img2").classList.add("hidden");
+  document.querySelector("img#img3").classList.add("hidden");
+  document.querySelector("img#img4").classList.add("hidden");
+  document.querySelector("img#img5").classList.add("hidden");
+  document.querySelector("img#img6").classList.add("hidden");
+  if (roll === 1) {
+    document.querySelector("img#img1").classList.remove("hidden");
+  } else if (roll === 2) {
+    document.querySelector("img#img2").classList.remove("hidden");
+  } else if (roll === 3) {
+    document.querySelector("img#img3").classList.remove("hidden");
+  } else if (roll === 4) {
+    document.querySelector("img#img4").classList.remove("hidden");
+  } else if (roll === 5) {
+    document.querySelector("img#img5").classList.remove("hidden");
+  } else if (roll === 6) {
+    document.querySelector("img#img6").classList.remove("hidden");
+  }
 }
 
 function holdScore() {
@@ -75,10 +98,10 @@ function holdScore() {
   if (pigGame.currentTurn === 0) {
     document.querySelector(".player1-totalScore").innerText = pigGame.players[0].totalScore;
     pigGame.switchTurns()
-    } else if (pigGame.currentTurn === 1) {
-      document.querySelector(".player2-totalScore").innerText = pigGame.players[1].totalScore;
-      pigGame.switchTurns()
-    }
+  } else if (pigGame.currentTurn === 1) {
+    document.querySelector(".player2-totalScore").innerText = pigGame.players[1].totalScore;
+    pigGame.switchTurns()
+  }
 }
 
 function winningScore() {
