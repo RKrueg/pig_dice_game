@@ -5,42 +5,48 @@
   <script src="js/scripts.js"></script>
   <title>Pig Dice Game</title>
 </head>
-<body>
-  <h1>Pig Dice Game</h1>
-  <div class="player1container">
-    <form id="player1Name">
-      <label for="player1">Player 1 Name</label>
-      <input type="text" class="player1">
-      <button type="submit" class="player1btn">Enter</button>
-    </form> 
-    <p>Player1: <span class="player1-userName"></span></p>
-    <p>Current Score: <span class="player1-currentScore"></span></p>
-    <p>Total Score: <span class="player1-totalScore"></span></p>
-  </div>
-  <div class="imageContainer">
-    <img class="hidden" id="img1" src="img/dice1.png" alt="rolled a 1">
-    <img class="hidden" id="img2" src="img/dice2.png" alt="rolled a 2">
-    <img class="hidden" id="img3" src="img/dice3.png" alt="rolled a 3">
-    <img class="hidden" id="img4" src="img/dice4.png" alt="rolled a 4">
-    <img class="hidden" id="img5" src="img/dice5.png" alt="rolled a 5">
-    <img class="hidden" id="img6" src="img/dice6.png" alt="rolled a 6">
-  </div>
-  <div class="player2container">
-    <form id="player2Name">
-      <label for="player2">Player 2 Name</label>
-      <input type="text" class="player2">
-      <button type="submit" class="player2btn">Enter</button>
-    </form> 
-    <p>Player2: <span class="player2-userName"></span></p>
-    <p>Current Score: <span class="player2-currentScore"></span></p>
-    <p>Total Score: <span class="player2-totalScore"></span></p>
-  </div>
-  <img src="" alt="">
-  <button type="btn" class="rollbtn">Roll Dice!</button>
-  <button type="btn" class="holdbtn">Hold</button>
-  <button type="btn" class="newGame">New Game</button>
-  <div id="winner-div" class="hidden">
-    <p class="winner-p"></p>
-  </div>
-</body>
+  <body>
+    <div class="header">
+      <h1>Pig Dice Game</h1>
+    </div>
+    <div class="container">
+      <div class="player1container">
+        <form id="player1Name">
+          <label for="player1">Player 1 Name</label>
+          <input type="text" class="player1">
+          <button type="submit" class="player1btn">Enter</button>
+        </form>
+        <p>Player1: <span class="player1-userName"></span></p>
+        <p>Current Score: <span class="player1-currentScore"></span></p>
+        <p>Total Score: <span class="player1-totalScore"></span></p>
+      </div>
+      <div class="imageContainer">
+        <img id="img1" src="img/dice1.png" alt="rolled a 1">
+        <img class="hidden" id="img2" src="img/dice2.png" alt="rolled a 2">
+        <img class="hidden" id="img3" src="img/dice3.png" alt="rolled a 3">
+        <img class="hidden" id="img4" src="img/dice4.png" alt="rolled a 4">
+        <img class="hidden" id="img5" src="img/dice5.png" alt="rolled a 5">
+        <img class="hidden" id="img6" src="img/dice6.png" alt="rolled a 6">
+      </div>
+      <div class="player2container">
+        <form id="player2Name">
+          <label for="player2">Player 2 Name</label>
+          <input type="text" class="player2">
+          <button type="submit" class="player2btn">Enter</button>
+        </form>
+        <p>Player2: <span class="player2-userName"></span></p>
+        <p>Current Score: <span class="player2-currentScore"></span></p>
+        <p>Total Score: <span class="player2-totalScore"></span></p>
+      </div>
+      <img src="" alt="">
+      <div class="buttonDiv">
+        <button type="btn" class="rollbtn">Roll Dice!</button>
+        <button type="btn" class="holdbtn">Hold</button>
+        <button type="btn" class="newGame">New Game</button>
+      </div><br><br>
+      <div id="winner-div" class="hidden">
+        <p class="winner-p"></p>
+      </div>
+    </div>
+  </body>
 </html>
