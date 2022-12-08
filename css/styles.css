@@ -3,21 +3,19 @@
 }
 
 h1 {
+  height: 100px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(8, 8, 8);
   text-transform: uppercase;
-  padding: 1px;
+  padding: 0px;
+  text-shadow: 4px 4px 5px white;
   font-family: 'Raleway', cursive;
-  font-size: large;
-  font-weight: 100;
+  font-size: 5rem;
+  font-weight: 80;
   position: relative;
-  background: linear-gradient(to right, rgb(116, 3, 107), rgba(107, 4, 100, 0.419), rgb(48, 4, 86));
-}
-
-.header {
-  background-image: url("../img/pigImage.jpeg");
-  background-size: contain;
-  background-position: center;
+  background: linear-gradient(to right, rgb(209, 143, 247), rgba(161, 66, 234, 0.419), rgb(129, 148, 235));
+  border: solid;
+  box-shadow: 5px 2px;
 }
 
 .container {
@@ -29,31 +27,61 @@ h1 {
   grid-column-start: 1;
   grid-column-end: 2;
   border: solid;
+  box-shadow: 5px 10px;
   color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 4px 4px 5px white;
+  background: linear-gradient(to right, rgb(242, 151, 151), rgba(207, 5, 5, 0.419), rgb(242, 151, 151));
+}
+
+.player1 {
+  box-sizing: border-box;
+  border: 3px rgb(57, 5, 89);
+  border-style: solid;
+  background-color: white;
+}
+
+.player1btn {
+  background-color: white;
 }
 
 .imageContainer {
   text-align: center;
   grid-column-start: 2;
   grid-column-end: 3;
-  border: black;
+  padding: 60px;
 }
 
 .player2container {
   grid-column-start: 3;
   grid-column-end: 4;
   border: solid;
+  box-shadow: 5px 10px;
   color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 4px 4px 5px white;
+  background: linear-gradient(to right, rgb(242, 151, 151), rgba(207, 5, 5, 0.419), rgb(242, 151, 151));
+}
+
+.player2 {
+  box-sizing: border-box;
+  border: 3px black;
+  border-style: solid;
+  background-color: white;
+}
+
+.player2btn {
+  background-color: white;
 }
 
 button {
@@ -61,7 +89,7 @@ button {
   color: black;
   text-transform: uppercase;
   padding: 1px;
-  font-family: 'Raleway', cursive;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 100;
   position: relative;
 }
@@ -70,17 +98,49 @@ button {
   text-align: center;
 }
 
+.rollbtn {
+  background: linear-gradient(to right, rgb(242, 151, 151), rgba(207, 5, 5, 0.419), rgb(242, 151, 151));
+}
+
+.holdbtn {
+  background: linear-gradient(to right, rgb(242, 151, 151), rgba(207, 5, 5, 0.419), rgb(242, 151, 151));
+}
+
+.newGame {
+  background: linear-gradient(to right, rgb(242, 151, 151), rgba(207, 5, 5, 0.419), rgb(242, 151, 151));
+}
+
 body {
   text-align: center;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   padding: 1px;
-  font-family: 'Raleway', cursive;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 100;
   position: relative;
-  background: linear-gradient(to right, rgb(57, 5, 89), rgba(253, 106, 222), rgb(57, 5, 89));
 }
 
 .winner-p {
   background: linear-gradient(to right, rgb(57, 5, 89), rgba(253, 106, 222), rgb(57, 5, 89));
+}
+
+h4 {
+  height: 100;
+  text-align: center;
+  color: transparent;
+  text-transform: uppercase;
+  padding: 0px;
+  font-family: 'Raleway', cursive;
+  font-size: 5rem;
+  font-weight: 80;
+  position: relative;
+  border: solid;
+  box-shadow: 5px 2px;
+  background: linear-gradient(to right, rgb(209, 143, 247), rgba(161, 66, 234, 0.419), rgb(129, 148, 235));
+}
+
+.footer {
+  background-image: url("../img/pigImage.jpeg");
+  background-size: contain;
+  background-position: center;
 }
